@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Autotrader360 Admin</title>
+    <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2>Autotrader360</h2>
+        <a href="admin.html">Dashboard</a>
+        <a href="leads.html">leads</a>
+        <a href="appointments.html">Appointments</a>
+    </aside>
+
+    <main class="admin-content">
+        <h1>Car Management</h1>
+
+        <form id="carform">
+            <input type="text" id="name" placeholder="Car name" required>
+            <input type="number" id="price" placeholder="price(ZMW)" required>
+            <input type="text" id="image" placeholder="Image path (image/car.jpg)" required>
+            <section id="status">
+                <option value="Available">Available</option>
+                <option value="Sold">Sold</option>
+            </section>
+            <button type="submit">Add Car</button>
+        </form>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Car</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="adminCarList"></tbody>
+        </table>
+    </main>
+    
+    <script src="js/admin.js"></script>
+</body>
+</html>   
